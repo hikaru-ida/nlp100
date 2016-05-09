@@ -16,5 +16,5 @@ for i in range(len(words)):
         random.shuffle(middle)
         word = word[0]+"".join(middle)+word[-1]
     new_words.append(word)
-
+=`=jedi=0, =`=        (*_*self*_*, iterable) =`=jedi=`=
 print " ".join(new_words)
