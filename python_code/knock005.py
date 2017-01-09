@@ -14,6 +14,7 @@ def seqToCharNgram(n, seq):
         char_ngram_ls.append(seq[i:i+n])
     return char_ngram_ls
 
-s = "I am an NLPer"
-print(seqToWordNgram(2, s))
-print(seqToCharNgram(2, s))
+if __name__ == '__main__':
+    s = "I am an NLPer"
+    print(seqToWordNgram(2, s))
+    print(seqToCharNgram(2, s))
