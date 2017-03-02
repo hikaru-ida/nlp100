@@ -1,14 +1,8 @@
-#/usr/bin/python
-# -*- coding: utf-8 -*-
-
 import sys
-input_file = open('../data/hightemp.txt', 'r')
 
-n = input()
-data = []
-for line in input_file:
-    data.append(line.strip())
-l = len(data)
+with open(sys.argv[1], 'r') as f:
+    lines = f.readlines()
 
-for i in range(l-n, l):
-    print data[i]
+ls_size = len(lines)
+for i in range(int(sys.argv[2]), 0, -1):
+    print(lines[ls_size - i].strip())

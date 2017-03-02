@@ -1,17 +1,9 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
-
 import sys
-input_file = open('../data/hightemp.txt', 'r')
 
-N = input()
-
-n = N
-for line in input_file:
-    if n <= 0:
-        break
-    print line.strip()
-    n = n - 1
-    
-
-input_file.close()
+with open(sys.argv[1], 'r') as f:
+    i = 0
+    for line in f:
+        print(line.strip())
+        i += 1
+        if int(sys.argv[2]) <= i:
+            break

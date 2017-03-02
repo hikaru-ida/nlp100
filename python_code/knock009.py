@@ -1,20 +1,21 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
-
 import random
 
-my_sent = "I couldn't believe that I could actually understand \
-what I was reading : the phenomenal power of the human mind ."
 
-# 自分のコード
-words = my_sent.split(" ")
-new_words = []
-for i in range(len(words)):
-    word = words[i]
-    if len(words[i]) > 4: 
-        middle = list(word[1:-1])
-        random.shuffle(middle)
-        word = word[0]+"".join(middle)+word[-1]
-    new_words.append(word)
-=`=jedi=0, =`=        (*_*self*_*, iterable) =`=jedi=`=
-print " ".join(new_words)
+def Typoglycemia(s):
+    words_ls = s.split(" ")
+    shuffled_ls = []
+    for word in words_ls:
+        if(len(word) >= 4):
+            rand_ls = list(word[1:-1])
+            random.shuffle(rand_ls)
+            shuffled_word = word[0]+"".join(rand_ls) + word[-1]
+            shuffled_ls.append(shuffled_word)
+        else:
+            shuffled_ls.append(word)
+
+    return " ".join(shuffled_ls)
+
+if __name__ == '__main__':
+    s = "I couldn't believe that I could actually understand " \
+        "what I was reading : the phenomenal power of the human mind ."
+    print(Typoglycemia(s))

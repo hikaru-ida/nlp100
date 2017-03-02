@@ -1,10 +1,5 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
+f = open('../data/hightemp.txt')
 
-import sys
-input_file = open(sys.argv[1], "r")
-
-for line in input_file:
-    line = line.replace("\t", "\n")
-    sys.stdout.write(line)
-
+for line in f:
+    line = line.strip().replace("\t", " ")
+    print(line)

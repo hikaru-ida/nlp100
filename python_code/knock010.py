@@ -1,11 +1,5 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
-
-import sys
-
-input_file = open(sys.argv[1], "r")
+f = open('../data/hightemp.txt')
 cnt = 0
-for line in input_file:
+for line in f:
     cnt += 1
-
-print cnt
+print(cnt)
