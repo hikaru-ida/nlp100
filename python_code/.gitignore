@@ -1,0 +1,7 @@
+*~
+*pyc
+__*
+.*
+..*
+!.gitignore
+__pycache__/
